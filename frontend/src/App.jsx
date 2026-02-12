@@ -1,11 +1,15 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import PatientRegistration from "./pages/PatientRegistration";
+import Overview from "./pages/Overview";
+import PatientRegistration from "./user/PatientRegistration";
+import AdminPortal from "./admin/adminPortal";
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<PatientRegistration />} />
+        <Route path="/" element={<Overview />} />
+        <Route path="/user" element={<PatientRegistration />} />
+        <Route path="/admin" element={<AdminPortal />} />
       </Routes>
     </Router>
   );
